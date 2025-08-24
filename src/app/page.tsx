@@ -144,7 +144,7 @@ export default function Home() {
             <ScrollReveal className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Universitas Trilogi</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi, Misi & Motto Universitas</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi Misi & Motto</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Fondasi yang menuntun perjalanan kami menuju keunggulan dan inovasi dalam pendidikan.
                 </p>
@@ -360,7 +360,7 @@ export default function Home() {
             <ScrollReveal className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">PKKMB Bratarana</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi & Misi Acara</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi & Misi</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Prinsip yang memandu pelaksanaan orientasi tahun ini.
                 </p>

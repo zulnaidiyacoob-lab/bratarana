@@ -41,7 +41,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container mx-auto mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Universitas Trilogi. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} GDGoC Trilogi. All rights reserved.</p>
       </div>
     </footer>
   );
