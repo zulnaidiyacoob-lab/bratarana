@@ -20,7 +20,7 @@ import {
   Building,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Countdown } from '@/components/countdown';
 import { Logo } from '@/components/logo';
 import { cn } from '@/lib/utils';
@@ -74,11 +74,13 @@ export function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <div className="flex flex-col h-full">
-                  <div className="p-6">
-                      <Logo />
-                  </div>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col">
+                <SheetHeader className="p-6 pb-0">
+                  <SheetTitle>
+                    <Logo />
+                  </SheetTitle>
+                </SheetHeader>
+                <div className="flex flex-col h-full overflow-y-auto">
                   <nav className="flex flex-col gap-4 p-6 text-lg font-medium">
                       {navLinks.map((link) => (
                           <SheetClose key={link.href} asChild>
@@ -89,7 +91,7 @@ export function Header() {
                           </SheetClose>
                       ))}
                   </nav>
-                  <div className="mt-auto p-6 space-y-4">
+                  <div className="mt-auto p-6 space-y-4 border-t">
                       <div className="p-4 rounded-lg bg-secondary">
                           <Countdown />
                       </div>
