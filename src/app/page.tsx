@@ -35,12 +35,12 @@ const faqItems = [
   {
     question: 'What is PKKMB?',
     answer:
-      'PKKMB (Pengenalan Kehidupan Kampus bagi Mahasiswa Baru) is an orientation event designed to introduce new students to the campus life, academic systems, and university culture at Bratarana.',
+      'PKKMB (Pengenalan Kehidupan Kampus bagi Mahasiswa Baru) is an orientation event designed to introduce new students to the campus life, academic systems, and university culture at Universitas Trilogi.',
   },
   {
     question: 'When and where will PKKMB take place?',
     answer:
-      'PKKMB is scheduled to start on September 9th, 2024. All activities will be held on the main Bratarana University campus. Please refer to the detailed schedule for specific locations and times.',
+      'PKKMB is scheduled to start on September 9th, 2024. All activities will be held on the main Universitas Trilogi campus. Please refer to the detailed schedule for specific locations and times.',
   },
   {
     question: 'What should I bring?',
@@ -75,7 +75,7 @@ const committeeMembers = [
 const schedule = {
   day1: [
     { time: "08:00 - 09:00", title: "Opening Ceremony", description: "Official start of PKKMB 2024 with the Rector's speech.", location: "Grand Hall" },
-    { time: "09:00 - 11:00", title: "University Vision & Mission", description: "Introduction to the core values and goals of Bratarana University.", location: "Grand Hall" },
+    { time: "09:00 - 11:00", title: "University Vision & Mission", description: "Introduction to the core values and goals of Universitas Trilogi.", location: "Grand Hall" },
     { time: "11:00 - 12:00", title: "Campus Tour Part 1", description: "Guided tour of the main academic buildings and library.", location: "Campus Grounds" },
     { time: "12:00 - 13:00", title: "Lunch Break", description: "Enjoy lunch with your new peers.", location: "University Cafeteria" },
     { time: "13:00 - 15:00", title: "Introduction to Academic System", description: "Learn about credits, grading, and academic regulations.", location: "Auditorium" },
@@ -120,7 +120,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl mt-4">
-                Your journey begins here. Discover everything you need to know about starting your adventure at Bratarana University.
+                Your journey begins here. Discover everything you need to know about starting your adventure at Universitas Trilogi.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={400}>

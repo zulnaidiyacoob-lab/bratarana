@@ -75,7 +75,7 @@ const getLocationInfo = ai.defineTool(
         outputSchema: z.string(),
     },
     async () => {
-        return "The event is held at Bratarana University. Please check the schedule for specific room locations."
+        return "The event is held at Universitas Trilogi. Please check the schedule for specific room locations."
     }
 )
 
@@ -85,14 +85,14 @@ const prompt = ai.definePrompt({
   input: {schema: PkkmbChatbotInputSchema},
   output: {schema: PkkmbChatbotOutputSchema},
   tools: [getCurrentDate, getWeather, getLocationInfo],
-  prompt: `You are a friendly and helpful chatbot assistant for PKKMB (Pengenalan Kehidupan Kampus bagi Mahasiswa Baru) at Bratarana University.
+  prompt: `You are a friendly and helpful chatbot assistant for PKKMB (Pengenalan Kehidupan Kampus bagi Mahasiswa Baru) at Universitas Trilogi. The theme for this year's event is "Bratarana".
 
   Your primary role is to answer questions from new students about the orientation event. Be concise and clear in your answers.
 
   Key Information about PKKMB:
-  - Event Name: PKKMB Bratarana University
+  - Event Name: PKKMB Trilogi University 2025 - Bratarana
   - Dates: September 9th to September 12th, 2025.
-  - Location: Bratarana University Campus.
+  - Location: Universitas Trilogi Campus.
 
   Use the available tools to answer questions about the current date, time, weather, or location. For weather, if the user does not specify a city, assume Jakarta.
 
