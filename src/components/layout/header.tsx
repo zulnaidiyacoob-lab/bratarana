@@ -6,6 +6,7 @@ import {
   BookOpen,
   CalendarDays,
   Cog,
+  Download,
   Flag,
   HelpCircle,
   Menu,
@@ -21,7 +22,6 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import { Countdown } from '@/components/countdown';
 import { Logo } from '@/components/logo';
 import { cn } from '@/lib/utils';
-import { BookletDialog } from '../booklet-dialog';
 
 const navLinks = [
   { href: '#vision-mission', label: 'Vision & Mission', icon: Flag },
@@ -35,7 +35,6 @@ const navLinks = [
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isBookletOpen, setIsBookletOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -91,17 +90,11 @@ export function Header() {
                       <div className="p-4 rounded-lg bg-secondary">
                           <Countdown />
                       </div>
-                      <Button asChild className="w-full" onClick={() => {
-                        const sheetClose = document.querySelector('[data-radix-dialog-close]');
-                        if (sheetClose instanceof HTMLElement) {
-                            sheetClose.click();
-                        }
-                        setIsBookletOpen(true)
-                      }}>
-                          <div className="flex items-center">
-                              <BookOpen className="mr-2 h-4 w-4" />
-                              View Booklet
-                          </div>
+                      <Button asChild className="w-full">
+                        <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" target="_blank" className="flex items-center">
+                            <Download className="mr-2 h-4 w-4" />
+                            Download Booklet
+                        </a>
                       </Button>
                       <div className="flex justify-center space-x-2 mt-4">
                          <Button variant="ghost" size="icon" asChild><a href="#"><Twitter className="h-5 w-5" /></a></Button>
@@ -115,7 +108,6 @@ export function Header() {
           </div>
         </div>
       </header>
-      <BookletDialog open={isBookletOpen} onOpenChange={setIsBookletOpen} />
     </>
   );
 }

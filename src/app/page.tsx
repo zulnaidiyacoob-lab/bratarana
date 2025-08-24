@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Accordion,
   AccordionContent,
@@ -14,6 +14,7 @@ import {
   BookOpen,
   CalendarDays,
   Cog,
+  Download,
   Flag,
   HelpCircle,
   Palette,
@@ -29,7 +30,6 @@ import { Footer } from '@/components/layout/footer';
 import { Chatbot } from '@/components/chatbot';
 import { ScrollReveal } from '@/components/scroll-reveal';
 import { Badge } from '@/components/ui/badge';
-import { BookletDialog } from '@/components/booklet-dialog';
 
 const faqItems = [
   {
@@ -104,8 +104,6 @@ const schedule = {
 };
 
 export default function Home() {
-  const [isBookletOpen, setIsBookletOpen] = useState(false);
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -127,9 +125,11 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={400}>
               <div className="mt-6 flex justify-center">
-                <Button size="lg" onClick={() => setIsBookletOpen(true)}>
-                  <BookOpen className="mr-2 h-5 w-5" />
-                  View Digital Booklet
+                <Button size="lg" asChild>
+                  <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" target="_blank">
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Digital Booklet
+                  </a>
                 </Button>
               </div>
             </ScrollReveal>
@@ -400,7 +400,6 @@ export default function Home() {
       </main>
       <Footer />
       <Chatbot />
-      <BookletDialog open={isBookletOpen} onOpenChange={setIsBookletOpen} />
     </div>
   );
 }
