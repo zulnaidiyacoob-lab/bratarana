@@ -24,6 +24,9 @@ import {
   Instagram,
   Facebook,
   Gem,
+  Rocket,
+  ShieldCheck,
+  Building,
 } from 'lucide-react';
 
 import { Header } from '@/components/layout/header';
@@ -135,15 +138,62 @@ export default function Home() {
             </ScrollReveal>
           </div>
         </section>
-
-        <section id="vision-mission" className="bg-background">
+        
+        <section id="pkkmb-vision-mission" className="bg-secondary/50">
           <div className="container px-4 md:px-6">
             <ScrollReveal className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Principles</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi, Misi & Motto</h2>
+                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">PKKMB Bratarana</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi & Misi Acara</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Guiding our journey towards excellence and innovation in education.
+                  Prinsip yang memandu pelaksanaan orientasi tahun ini.
+                </p>
+              </div>
+            </ScrollReveal>
+            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:grid-cols-2 lg:gap-12 mt-12">
+              <ScrollReveal delay={200}>
+                <Card className="h-full shadow-lg hover:shadow-xl transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="bg-primary text-primary-foreground p-3 rounded-md"><Flag className="h-6 w-6" /></div>
+                      <CardTitle className="text-2xl">Visi PKKMB</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">Menjadi wadah untuk mencetak generasi mahasiswa baru yang mampu beradaptasi, berprestasi, dan berkontribusi secara aktif dalam lingkungan akademik dan sosial.</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+              <ScrollReveal delay={400}>
+                <Card className="h-full shadow-lg hover:shadow-xl transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="bg-primary text-primary-foreground p-3 rounded-md"><Rocket className="h-6 w-6" /></div>
+                      <CardTitle className="text-2xl">Misi PKKMB</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                      <li>Memperkenalkan kehidupan kampus secara komprehensif.</li>
+                      <li>Menumbuhkan semangat kolaborasi dan kerja sama tim.</li>
+                      <li>Mendorong pengembangan potensi diri mahasiswa baru.</li>
+                      <li>Menanamkan nilai-nilai inti Universitas Trilogi.</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+        
+        <section id="university-vision-mission" className="bg-background">
+          <div className="container px-4 md:px-6">
+            <ScrollReveal className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Universitas Trilogi</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi, Misi & Motto Universitas</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Fondasi yang menuntun perjalanan kami menuju keunggulan dan inovasi dalam pendidikan.
                 </p>
               </div>
             </ScrollReveal>
@@ -152,12 +202,12 @@ export default function Home() {
                 <Card className="h-full shadow-lg hover:shadow-xl transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-4">
-                      <div className="bg-primary text-primary-foreground p-3 rounded-md"><Flag className="h-6 w-6" /></div>
-                      <CardTitle className="text-2xl">Visi Kami</CardTitle>
+                      <div className="bg-primary text-primary-foreground p-3 rounded-md"><Building className="h-6 w-6" /></div>
+                      <CardTitle className="text-2xl">Visi Universitas</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">To be a leading institution that cultivates knowledge, character, and leadership, creating graduates who are ready to make a positive impact on the world.</p>
+                    <p className="text-muted-foreground">Menjadi perguruan tinggi unggul di bidang teknopreneur, berlandaskan kolaborasi dan kemandirian untuk kesejahteraan bangsa.</p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
@@ -165,16 +215,16 @@ export default function Home() {
                 <Card className="h-full shadow-lg hover:shadow-xl transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-4">
-                      <div className="bg-primary text-primary-foreground p-3 rounded-md"><Flag className="h-6 w-6" /></div>
-                      <CardTitle className="text-2xl">Misi Kami</CardTitle>
+                      <div className="bg-primary text-primary-foreground p-3 rounded-md"><ShieldCheck className="h-6 w-6" /></div>
+                      <CardTitle className="text-2xl">Misi Universitas</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                      <li>Provide world-class education and research facilities.</li>
-                      <li>Foster a culture of critical thinking and creativity.</li>
-                      <li>Promote community engagement and social responsibility.</li>
-                      <li>Uphold values of integrity, diversity, and excellence.</li>
+                      <li>Menyelenggarakan pendidikan tinggi berkualitas.</li>
+                      <li>Mengembangkan penelitian inovatif dan relevan.</li>
+                      <li>Melaksanakan pengabdian kepada masyarakat.</li>
+                      <li>Membangun jejaring kolaborasi yang luas.</li>
                     </ul>
                   </CardContent>
                 </Card>
@@ -184,7 +234,7 @@ export default function Home() {
                   <CardHeader>
                     <div className="flex items-center gap-4">
                       <div className="bg-primary text-primary-foreground p-3 rounded-md"><Gem className="h-6 w-6" /></div>
-                      <CardTitle className="text-2xl">Motto Kami</CardTitle>
+                      <CardTitle className="text-2xl">Motto Universitas</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -195,7 +245,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
+
         <section id="activities" className="bg-secondary/50">
           <div className="container px-4 md:px-6">
             <ScrollReveal className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -392,7 +442,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Frequently Asked Questions</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Have questions? We have answers. If you don't find what you're looking for, try our AI chatbot!
+                  Have questions? We have answers. If you don't find what you're looking for, feel free to contact us.
                 </p>
               </div>
             </ScrollReveal>

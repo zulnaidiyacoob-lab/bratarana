@@ -17,6 +17,7 @@ import {
   Instagram,
   Facebook,
   Gem,
+  Building,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
@@ -25,7 +26,8 @@ import { Logo } from '@/components/logo';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#vision-mission', label: 'Visi, Misi & Motto', icon: Flag },
+  { href: '#pkkmb-vision-mission', label: 'Visi & Misi PKKMB', icon: Flag },
+  { href: '#university-vision-mission', label: 'Visi, Misi & Motto Univ', icon: Building },
   { href: '#activities', label: 'Activities', icon: CalendarDays },
   { href: '#logo-meaning', label: 'Logo Meaning', icon: Palette },
   { href: '#committee', label: 'Committee', icon: Users },
