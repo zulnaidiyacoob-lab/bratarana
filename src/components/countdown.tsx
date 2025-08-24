@@ -48,7 +48,7 @@ export function Countdown() {
   const { days, hours, minutes, seconds } = timeLeft;
   
   if (EVENT_DATE.getTime() - new Date().getTime() < 0) {
-    return <span className="text-sm font-medium text-accent">Event has started!</span>
+    return <span className="text-sm font-medium text-accent">PKKMB telah dimulai</span>
   }
 
   return (
