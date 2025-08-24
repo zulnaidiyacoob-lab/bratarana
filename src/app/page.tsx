@@ -35,12 +35,12 @@ const faqItems = [
   {
     question: 'What is PKKMB?',
     answer:
-      'PKKMB (Pengenalan Kehidupan Kampus bagi Mahasiswa Baru) is an orientation event designed to introduce new students to the campus life, academic systems, and university culture at Castleton.',
+      'PKKMB (Pengenalan Kehidupan Kampus bagi Mahasiswa Baru) is an orientation event designed to introduce new students to the campus life, academic systems, and university culture at Bratarana.',
   },
   {
     question: 'When and where will PKKMB take place?',
     answer:
-      'PKKMB is scheduled to start on September 9th, 2024. All activities will be held on the main Castleton University campus. Please refer to the detailed schedule for specific locations and times.',
+      'PKKMB is scheduled to start on September 9th, 2024. All activities will be held on the main Bratarana University campus. Please refer to the detailed schedule for specific locations and times.',
   },
   {
     question: 'What should I bring?',
@@ -75,7 +75,7 @@ const committeeMembers = [
 const schedule = {
   day1: [
     { time: "08:00 - 09:00", title: "Opening Ceremony", description: "Official start of PKKMB 2024 with the Rector's speech.", location: "Grand Hall" },
-    { time: "09:00 - 11:00", title: "University Vision & Mission", description: "Introduction to the core values and goals of Castleton University.", location: "Grand Hall" },
+    { time: "09:00 - 11:00", title: "University Vision & Mission", description: "Introduction to the core values and goals of Bratarana University.", location: "Grand Hall" },
     { time: "11:00 - 12:00", title: "Campus Tour Part 1", description: "Guided tour of the main academic buildings and library.", location: "Campus Grounds" },
     { time: "12:00 - 13:00", title: "Lunch Break", description: "Enjoy lunch with your new peers.", location: "University Cafeteria" },
     { time: "13:00 - 15:00", title: "Introduction to Academic System", description: "Learn about credits, grading, and academic regulations.", location: "Auditorium" },
@@ -95,7 +95,7 @@ const schedule = {
     { time: "15:00 - 16:00", title: "Cultural Performances", description: "Showcase of student talents.", location: "Student Center" },
   ],
   day4: [
-    { time: "09:00 - 10:30", title: "Alumni Sharing Session", description: "Get inspired by the stories of successful Castleton alumni.", location: "Grand Hall" },
+    { time: "09:00 - 10:30", title: "Alumni Sharing Session", description: "Get inspired by the stories of successful Bratarana alumni.", location: "Grand Hall" },
     { time: "10:30 - 11:30", title: "Final Q&A with Committee", description: "Your last chance to ask any remaining questions.", location: "Grand Hall" },
     { time: "11:30 - 12:00", title: "PKKMB Pledge", description: "Official pledge taking ceremony for new students.", location: "Grand Hall" },
     { time: "12:00 - 13:00", title: "Lunch & Networking", description: "Final lunch together.", location: "University Cafeteria" },
@@ -115,12 +115,12 @@ export default function Home() {
           <div className="container px-4 md:px-6 text-center">
             <ScrollReveal>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Welcome to Castleton Orientation
+                Welcome to Bratarana Orientation
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl mt-4">
-                Your journey begins here. Discover everything you need to know about starting your adventure at Castleton University.
+                Your journey begins here. Discover everything you need to know about starting your adventure at Bratarana University.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={400}>

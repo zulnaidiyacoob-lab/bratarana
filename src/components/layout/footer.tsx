@@ -9,20 +9,20 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-2 text-muted-foreground text-sm max-w-xs mx-auto md:mx-0">
-            Castleton University Orientation Program. Preparing future leaders since 1887.
+            Bratarana University Orientation Program. Preparing future leaders since 1887.
           </p>
         </div>
         <div>
           <h3 className="font-headline text-lg font-semibold">Contact Information</h3>
           <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-            <li>Email: pkkmb@castleton.edu</li>
+            <li>Email: pkkmb@bratarana.edu</li>
             <li>
                 <div className="flex items-center justify-center md:justify-start gap-2">
                     <Phone className="h-4 w-4" />
                     <span>(123) 456-7890</span>
                 </div>
             </li>
-            <li>Castleton University, 123 Scholar Ave, Wisdom, EduState</li>
+            <li>Bratarana University, 123 Scholar Ave, Wisdom, EduState</li>
           </ul>
         </div>
         <div>
@@ -41,7 +41,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container mx-auto mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Castleton University. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Bratarana University. All rights reserved.</p>
       </div>
     </footer>
   );
