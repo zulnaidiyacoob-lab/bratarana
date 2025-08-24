@@ -23,6 +23,7 @@ import {
   Twitter,
   Instagram,
   Facebook,
+  Gem,
 } from 'lucide-react';
 
 import { Header } from '@/components/layout/header';
@@ -54,21 +55,21 @@ const faqItems = [
 ];
 
 const committeeMembers = [
-  { name: 'Dr. Eleanor Vance', role: 'Rector' },
-  { name: 'Prof. Alistair Finch', role: 'Vice Rector' },
-  { name: 'Johnathan Doe', role: 'Head of Committee' },
-  { name: 'Jane Smith', role: 'Secretary' },
-  { name: 'Michael Brown', role: 'Treasurer' },
-  { name: 'Emily White', role: 'Event Coordinator' },
-  { name: 'David Green', role: 'Logistics Head' },
-  { name: 'Sarah Wilson', role: 'Security Coordinator' },
-  { name: 'Chris Taylor', role: 'Creative Director' },
-  { name: 'Olivia Martinez', role: 'Public Relations' },
-  { name: 'James Johnson', role: 'Documentation' },
-  { name: 'Sophia Lee', role: 'Medical Team Lead' },
-  { name: 'Daniel Clark', role: 'Student Mentor Coordinator' },
-  { name: 'Isabella Rodriguez', role: 'Workshop Facilitator' },
-  { name: 'William Lewis', role: 'Sponsorship' },
+  { name: 'Sabrina Alifia', role: 'Ketua Pelaksana' },
+  { name: 'Nakyanu Qafka', role: 'Wakil Ketua Pelaksana' },
+  { name: 'Aura', role: 'Koordinator Sekretaris' },
+  { name: 'Nazwa Nurul', role: 'Koordinator Bendahara' },
+  { name: 'Ifana Fadiyah', role: 'Koordinator Mentor' },
+  { name: 'Nathaya Allea', role: 'Koordinator Konsumsi' },
+  { name: 'Meydina', role: 'Koordinator Sponsor' },
+  { name: 'Dessy F', role: 'Koordinator Kesehatan' },
+  { name: 'Rifqi M', role: 'Koordinator Acara' },
+  { name: 'Reffi R', role: 'Koordinator Humas' },
+  { name: 'Reyhan Tamim', role: 'Koordinator Keamanan' },
+  { name: 'Halwa Azuro', role: 'Koordinator Publikasi' },
+  { name: 'Egis', role: 'Koordinator Desain' },
+  { name: 'Anya Triandra', role: 'Koordinator Dokumentasi' },
+  { name: 'Asraf Tria', role: 'Koordinator Perlengkapan' },
 ];
 
 const schedule = {
@@ -140,19 +141,19 @@ export default function Home() {
             <ScrollReveal className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Principles</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Vision & Mission</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Visi, Misi & Motto</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Guiding our journey towards excellence and innovation in education.
                 </p>
               </div>
             </ScrollReveal>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:grid-cols-2 lg:gap-12 mt-12">
+            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:grid-cols-3 lg:gap-12 mt-12">
               <ScrollReveal delay={200}>
                 <Card className="h-full shadow-lg hover:shadow-xl transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-4">
                       <div className="bg-primary text-primary-foreground p-3 rounded-md"><Flag className="h-6 w-6" /></div>
-                      <CardTitle className="text-2xl">Our Vision</CardTitle>
+                      <CardTitle className="text-2xl">Visi Kami</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -165,7 +166,7 @@ export default function Home() {
                   <CardHeader>
                     <div className="flex items-center gap-4">
                       <div className="bg-primary text-primary-foreground p-3 rounded-md"><Flag className="h-6 w-6" /></div>
-                      <CardTitle className="text-2xl">Our Mission</CardTitle>
+                      <CardTitle className="text-2xl">Misi Kami</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -175,6 +176,19 @@ export default function Home() {
                       <li>Promote community engagement and social responsibility.</li>
                       <li>Uphold values of integrity, diversity, and excellence.</li>
                     </ul>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+              <ScrollReveal delay={600}>
+                <Card className="h-full shadow-lg hover:shadow-xl transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="bg-primary text-primary-foreground p-3 rounded-md"><Gem className="h-6 w-6" /></div>
+                      <CardTitle className="text-2xl">Motto Kami</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground text-lg italic">"Teknopreneur, Kolaborasi, dan Kemandirian"</p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
