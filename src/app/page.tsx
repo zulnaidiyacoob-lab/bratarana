@@ -27,7 +27,6 @@ import {
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { Chatbot } from '@/components/chatbot';
 import { ScrollReveal } from '@/components/scroll-reveal';
 import { Badge } from '@/components/ui/badge';
 
@@ -399,7 +398,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-      <Chatbot />
     </div>
   );
 }
