@@ -29,6 +29,7 @@ import { Footer } from '@/components/layout/footer';
 import { Chatbot } from '@/components/chatbot';
 import { ScrollReveal } from '@/components/scroll-reveal';
 import { Badge } from '@/components/ui/badge';
+import { BookletDialog } from '@/components/booklet-dialog';
 
 const faqItems = [
   {
@@ -60,6 +61,15 @@ const committeeMembers = [
   { name: 'Jane Smith', role: 'Secretary' },
   { name: 'Michael Brown', role: 'Treasurer' },
   { name: 'Emily White', role: 'Event Coordinator' },
+  { name: 'David Green', role: 'Logistics Head' },
+  { name: 'Sarah Wilson', role: 'Security Coordinator' },
+  { name: 'Chris Taylor', role: 'Creative Director' },
+  { name: 'Olivia Martinez', role: 'Public Relations' },
+  { name: 'James Johnson', role: 'Documentation' },
+  { name: 'Sophia Lee', role: 'Medical Team Lead' },
+  { name: 'Daniel Clark', role: 'Student Mentor Coordinator' },
+  { name: 'Isabella Rodriguez', role: 'Workshop Facilitator' },
+  { name: 'William Lewis', role: 'Sponsorship' },
 ];
 
 const schedule = {
@@ -94,6 +104,8 @@ const schedule = {
 };
 
 export default function Home() {
+  const [isBookletOpen, setIsBookletOpen] = useState(false);
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -115,11 +127,9 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={400}>
               <div className="mt-6 flex justify-center">
-                <Button size="lg" asChild>
-                  <a href="/booklet.pdf" target="_blank">
-                    <BookOpen className="mr-2 h-5 w-5" />
-                    View Digital Booklet
-                  </a>
+                <Button size="lg" onClick={() => setIsBookletOpen(true)}>
+                  <BookOpen className="mr-2 h-5 w-5" />
+                  View Digital Booklet
                 </Button>
               </div>
             </ScrollReveal>
@@ -340,9 +350,9 @@ export default function Home() {
                 </p>
               </div>
             </ScrollReveal>
-            <div className="mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-12">
+            <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mt-12">
               {committeeMembers.map((member, index) => (
-                <ScrollReveal key={member.name} delay={index * 100} className="text-center">
+                <ScrollReveal key={member.name} delay={index * 50} className="text-center">
                   <Image
                     src={`https://placehold.co/200x200.png`}
                     data-ai-hint="portrait person"
@@ -390,6 +400,7 @@ export default function Home() {
       </main>
       <Footer />
       <Chatbot />
+      <BookletDialog open={isBookletOpen} onOpenChange={setIsBookletOpen} />
     </div>
   );
 }
