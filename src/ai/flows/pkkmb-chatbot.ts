@@ -41,7 +41,7 @@ const getCurrentDate = ai.defineTool(
     return {
         day: now.toLocaleDateString('id-ID', { weekday: 'long' }),
         date: now.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' }),
-        time: now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }),
+        time: now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', hour12: false }),
     }
   }
 );
