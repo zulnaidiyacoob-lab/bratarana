@@ -31,11 +31,8 @@ const navLinks = [
   { href: '#contact', label: 'Contact', icon: Phone },
 ];
 
-interface HeaderProps {
-  onBookletOpen: () => void;
-}
 
-export function Header({ onBookletOpen }: HeaderProps) {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -51,7 +48,7 @@ export function Header({ onBookletOpen }: HeaderProps) {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-6">
             <Logo />
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+            <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
                 {navLinks.map((link) => (
                     <Link key={link.href} href={link.href} className="text-foreground/80 hover:text-foreground transition-colors">
                         {link.label}
@@ -60,15 +57,17 @@ export function Header({ onBookletOpen }: HeaderProps) {
             </nav>
         </div>
         
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
             <Countdown />
-            <Button onClick={onBookletOpen} variant="outline" size="sm">
-                <BookOpen className="mr-2 h-4 w-4" />
-                Booklet
+            <Button asChild variant="outline" size="sm">
+                <a href="/booklet.pdf" target="_blank">
+                  <BookOpen className="mr-2 h-4 w-4" />
+                  Booklet
+                </a>
             </Button>
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -95,9 +94,11 @@ export function Header({ onBookletOpen }: HeaderProps) {
                     <div className="p-4 rounded-lg bg-secondary">
                         <Countdown />
                     </div>
-                    <Button onClick={onBookletOpen} className="w-full">
-                        <BookOpen className="mr-2 h-4 w-4" />
-                        View Booklet
+                    <Button asChild className="w-full">
+                        <a href="/booklet.pdf" target="_blank">
+                            <BookOpen className="mr-2 h-4 w-4" />
+                            View Booklet
+                        </a>
                     </Button>
                     <div className="flex justify-center space-x-2 mt-4">
                        <Button variant="ghost" size="icon" asChild><a href="#"><Twitter className="h-5 w-5" /></a></Button>

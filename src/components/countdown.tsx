@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 // Set the event date to a future date for demonstration
-const EVENT_DATE = new Date("2024-09-01T09:00:00");
+const EVENT_DATE = new Date("2024-09-09T09:00:00");
 
 export function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -42,7 +42,7 @@ export function Countdown() {
   }, []);
 
   if (!isClient) {
-    return <div className="flex items-center gap-3 text-sm font-medium w-48 h-6 bg-gray-200 animate-pulse rounded-md" />;
+    return <div className="flex items-center justify-center gap-2 md:gap-3 text-sm font-medium w-48 h-10 bg-gray-200 animate-pulse rounded-md" />;
   }
   
   const { days, hours, minutes, seconds } = timeLeft;
@@ -52,7 +52,7 @@ export function Countdown() {
   }
 
   return (
-    <div className="flex items-center gap-3 text-sm font-medium">
+    <div className="flex items-center justify-center gap-2 md:gap-3 text-sm font-medium">
       <div className="flex flex-col items-center">
         <span className="font-bold text-lg leading-none">{days}</span>
         <span className="text-xs text-muted-foreground">days</span>
@@ -62,13 +62,13 @@ export function Countdown() {
         <span className="font-bold text-lg leading-none">{hours.toString().padStart(2, '0')}</span>
         <span className="text-xs text-muted-foreground">hours</span>
       </div>
-      <span className="font-bold text-lg">:</span>
-      <div className="flex flex-col items-center">
+      <span className="font-bold text-lg hidden md:inline-block">:</span>
+      <div className="flex-col items-center hidden md:flex">
         <span className="font-bold text-lg leading-none">{minutes.toString().padStart(2, '0')}</span>
         <span className="text-xs text-muted-foreground">mins</span>
       </div>
-      <span className="font-bold text-lg">:</span>
-      <div className="flex flex-col items-center">
+      <span className="font-bold text-lg hidden md:inline-block">:</span>
+      <div className="flex-col items-center hidden md:flex">
         <span className="font-bold text-lg leading-none">{seconds.toString().padStart(2, '0')}</span>
         <span className="text-xs text-muted-foreground">secs</span>
       </div>

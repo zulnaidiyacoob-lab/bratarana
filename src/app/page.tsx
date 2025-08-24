@@ -26,7 +26,6 @@ import {
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { BookletDialog } from '@/components/booklet-dialog';
 import { Chatbot } from '@/components/chatbot';
 import { ScrollReveal } from '@/components/scroll-reveal';
 import { Badge } from '@/components/ui/badge';
@@ -40,7 +39,7 @@ const faqItems = [
   {
     question: 'When and where will PKKMB take place?',
     answer:
-      'PKKMB is scheduled to start on September 1st, 2024. All activities will be held on the main Castleton University campus. Please refer to the detailed schedule for specific locations and times.',
+      'PKKMB is scheduled to start on September 9th, 2024. All activities will be held on the main Castleton University campus. Please refer to the detailed schedule for specific locations and times.',
   },
   {
     question: 'What should I bring?',
@@ -76,16 +75,28 @@ const schedule = {
     { time: "10:00 - 12:00", title: "Student Organizations Fair", description: "Explore various clubs and organizations you can join.", location: "Student Center" },
     { time: "12:00 - 13:00", title: "Lunch Break", description: "Network and socialize.", location: "University Cafeteria" },
     { time: "13:00 - 15:00", title: "Workshop: Success Strategies", description: "Tips and tricks for a successful university life.", location: "Workshop Rooms" },
-    { time: "15:00 - 16:00", title: "Closing Remarks", description: "Final session and group photo.", location: "Grand Hall" },
+    { time: "15:00 - 16:00", title: "Closing Remarks Day 2", description: "Recap of the day's events.", location: "Auditorium" },
+  ],
+  day3: [
+    { time: "09:00 - 11:00", title: "Library & Digital Resources", description: "A session on how to use the university's library and online databases.", location: "Library" },
+    { time: "11:00 - 12:00", title: "Safety and Security Briefing", description: "Important information about campus safety protocols.", location: "Auditorium" },
+    { time: "12:00 - 13:00", title: "Lunch Break", description: "Enjoy lunch with your group.", location: "University Cafeteria" },
+    { time: "13:00 - 15:00", title: "Team Building Activities", description: "Fun games and activities to build camaraderie.", location: "Sports Field" },
+    { time: "15:00 - 16:00", title: "Cultural Performances", description: "Showcase of student talents.", location: "Student Center" },
+  ],
+  day4: [
+    { time: "09:00 - 10:30", title: "Alumni Sharing Session", description: "Get inspired by the stories of successful Castleton alumni.", location: "Grand Hall" },
+    { time: "10:30 - 11:30", title: "Final Q&A with Committee", description: "Your last chance to ask any remaining questions.", location: "Grand Hall" },
+    { time: "11:30 - 12:00", title: "PKKMB Pledge", description: "Official pledge taking ceremony for new students.", location: "Grand Hall" },
+    { time: "12:00 - 13:00", title: "Lunch & Networking", description: "Final lunch together.", location: "University Cafeteria" },
+    { time: "13:00 - 14:00", title: "Closing Ceremony & Awards", description: "Official closing of PKKMB 2024.", location: "Grand Hall" },
   ]
 };
 
 export default function Home() {
-  const [isBookletOpen, setIsBookletOpen] = useState(false);
-
   return (
     <div className="flex min-h-screen flex-col">
-      <Header onBookletOpen={() => setIsBookletOpen(true)} />
+      <Header />
       <main className="flex-1">
         <section
           id="hero"
@@ -104,9 +115,11 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={400}>
               <div className="mt-6 flex justify-center">
-                <Button size="lg" onClick={() => setIsBookletOpen(true)}>
-                  <BookOpen className="mr-2 h-5 w-5" />
-                  View Digital Booklet
+                <Button size="lg" asChild>
+                  <a href="/booklet.pdf" target="_blank">
+                    <BookOpen className="mr-2 h-5 w-5" />
+                    View Digital Booklet
+                  </a>
                 </Button>
               </div>
             </ScrollReveal>
@@ -201,6 +214,52 @@ export default function Home() {
                   <AccordionContent>
                      <div className="grid gap-4 mt-4">
                       {schedule.day2.map((item, index) => (
+                        <ScrollReveal key={index} delay={index * 100}>
+                           <Card>
+                              <CardContent className="p-4 flex justify-between items-center">
+                                <div className="flex items-center gap-4">
+                                  <div className="font-bold font-mono text-primary bg-primary/10 px-3 py-2 rounded-md">{item.time}</div>
+                                  <div>
+                                    <h3 className="font-bold text-lg">{item.title}</h3>
+                                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                                  </div>
+                                </div>
+                                <Badge variant="secondary">{item.location}</Badge>
+                              </CardContent>
+                            </Card>
+                        </ScrollReveal>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="day3">
+                  <AccordionTrigger className="text-2xl font-headline">Day 3: Workshops & Activities</AccordionTrigger>
+                  <AccordionContent>
+                     <div className="grid gap-4 mt-4">
+                      {schedule.day3.map((item, index) => (
+                        <ScrollReveal key={index} delay={index * 100}>
+                           <Card>
+                              <CardContent className="p-4 flex justify-between items-center">
+                                <div className="flex items-center gap-4">
+                                  <div className="font-bold font-mono text-primary bg-primary/10 px-3 py-2 rounded-md">{item.time}</div>
+                                  <div>
+                                    <h3 className="font-bold text-lg">{item.title}</h3>
+                                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                                  </div>
+                                </div>
+                                <Badge variant="secondary">{item.location}</Badge>
+                              </CardContent>
+                            </Card>
+                        </ScrollReveal>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="day4">
+                  <AccordionTrigger className="text-2xl font-headline">Day 4: Alumni & Closing</AccordionTrigger>
+                  <AccordionContent>
+                     <div className="grid gap-4 mt-4">
+                      {schedule.day4.map((item, index) => (
                         <ScrollReveal key={index} delay={index * 100}>
                            <Card>
                               <CardContent className="p-4 flex justify-between items-center">
@@ -330,7 +389,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-      <BookletDialog open={isBookletOpen} onOpenChange={setIsBookletOpen} />
       <Chatbot />
     </div>
   );
